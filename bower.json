@@ -1,4 +1,6 @@
 {
   "name": "emberfire-chat",
-  "dependencies": {}
+  "dependencies": {
+    "firebase": "^3.0.0"
+  }
 }
