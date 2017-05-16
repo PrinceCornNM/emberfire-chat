@@ -1,0 +1,1 @@
+export { default } from 'emberfire-chat/components/firebase-chat';
