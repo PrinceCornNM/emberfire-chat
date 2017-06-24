@@ -2,17 +2,18 @@ import Ember from 'ember';
 import layout from '../templates/components/firebase-chat';
 
 const {
+  Component,
   get,
   set,
   inject: { service }
 } = Ember;
 
-export default Ember.Component.extend({
+export default Component.extend({
   layout,
   store: service(),
   actions: {
     sendMessage() {
-      this.sendAction('sendMessage', get(this, 'messageText'));
+      get(this, 'sendMessage')(get(this, 'messageText'));
     }
   }
 });
