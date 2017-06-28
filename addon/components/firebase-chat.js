@@ -31,24 +31,28 @@ export default Component.extend({
     //   contactArr.push(name);
     //   console.log(name);
     // });
+
+    console.log(7);
     let contacts = store.query('contacts', {
       orderBy: 'i',
       equalTo: uid
+    }).then((contact) => {
+      contactArr.push(store.findRecord('user', get(contact, 'r')));
     });
 
-    console.log(2);
 
-    for (var contact in contacts){
-      console.log(get(get(contact, 'r'), 'id'));
-    }
+    // for (var contact in contacts){
+    //   console.log(get(contact, 'r'));
+    //   store.findRecord('user', 'KWfG4jWnaddacnak2dPjR3ox1Gk2');
+    // }
 
     // contacts.forEach((contact) => {
     //   console.log(get(get(contact, 'r'), 'id'));
     // });
 
-    console.log(contacts);
+    //console.log(contacts);
 
-    return contacts;
+    return contactArr;
   })
 });
 

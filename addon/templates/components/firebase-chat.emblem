@@ -1,4 +1,4 @@
 div.contact-holder	
 	= each contacts as |contact|
 		div
-			| aaaa
+			= contact
