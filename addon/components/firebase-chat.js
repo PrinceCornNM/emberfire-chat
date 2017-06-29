@@ -17,12 +17,13 @@ export default Component.extend({
       get(this, 'sendMessage')(get(this, 'messageText'));
     }
   },
-  contacts: computed(function() {
-    let store = get(this, 'store');
 
-    let uid = get(this, 'userId');
+  // contacts: computed(function() {
+    // let store = get(this, 'store');
 
-    let contactArr = [];
+    // let uid = get(this, 'userId');
+
+    // let contactArr = [];
     // let contacts = store.query('contacts', { filter: { i: String(uid) } }).then(function(contact) {
     //   window.contact= contact;
     //   console.log(contact.get('r'));
@@ -32,13 +33,13 @@ export default Component.extend({
     //   console.log(name);
     // });
 
-    console.log(7);
-    let contacts = store.query('contacts', {
-      orderBy: 'i',
-      equalTo: uid
-    }).then((contact) => {
-      contactArr.push(store.findRecord('user', get(contact, 'r')));
-    });
+    // console.log(7);
+    // let contacts = store.query('contacts', {
+    //   orderBy: 'i',
+    //   equalTo: uid
+    // }).then((contact) => {
+    //   contactArr.push(store.findRecord('user', get(contact, 'r')));
+    // });
 
 
     // for (var contact in contacts){
@@ -52,7 +53,7 @@ export default Component.extend({
 
     //console.log(contacts);
 
-    return contactArr;
-  })
+  //   return contactArr;
+  // })
 });
 

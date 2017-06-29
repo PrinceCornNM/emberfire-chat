@@ -1,4 +1,33 @@
-div.contact-holder	
-	= each contacts as |contact|
-		div
-			= contact
+.efc
+  .i
+    / info about recipient on top bar
+    .av
+      img src=avatarUrl alt=name height=20 width=20
+      .nm
+        = name
+  .mc
+    / each individual message
+    = messages as |m|
+      if m.isOwner
+        / message and current user styling
+        .m.o
+          / message text
+          .mt
+            = m.t
+          / message time
+          .t
+            = m.x
+      else
+        / message and recipient styling
+        .m.r
+        / message sender avatar
+          .av
+            img src=avatarUrl alt=name height=20 width=20
+          / message text
+          .mt
+            = m.t
+          / message time
+          .t
+            = m.x
+  .t
+    = textarea value=messageText
