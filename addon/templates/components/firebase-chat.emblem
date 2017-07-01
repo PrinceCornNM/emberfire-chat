@@ -1,4 +1,6 @@
 .menu
+  h1
+    | Messages
   .back
     i.fa.fa-chevron-left
       img src=avatarUrl alt=name  draggable="false"
@@ -16,5 +18,7 @@ ol.chat
           time
             = m.x
 = textarea value=messageText class="textarea" type="text" placeholder="Type here!" value=messageText
-  div.emojis
+div.emojis
+.submit
   button click='sendMessage'
+    | Submit
