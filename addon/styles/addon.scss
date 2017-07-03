@@ -1,59 +1,59 @@
 .menu {
-    position: fixed;
-    top: 50px;
-    left: 0px;
-    right: 0px;
-    width: 100%;
-    height: 50px;
-    z-index: 100;
+  height: 50px;
+  left: 0px;
+  position: fixed;
+  right: 0px;
+  top: 50px;
+  width: 100%;
+  z-index: 100;
 }
 
 .name {
-    position: absolute;
-    top: 3px;
-    left: 110px;
-    font-size: 25px;
-    font-weight: 300;
-    cursor: default;
+  cursor: default;
+  font-size: 25px;
+  font-weight: 300;
+  left: 110px;
+  position: absolute;
+  top: 3px;
 }
 
 .textarea {
-    position: absolute;
-    bottom: 206px;
-    left: 0px;
-    right: 0px;
-    width: calc(100% - 55px);
-    height: 50px;
-    z-index: 99;
-    border: none;
-    outline: none;
-    padding-left: 55px;
-    /* padding-right: 55px; */
-    font-weight: 400;
+  /* padding-right: 55px; */
+  border: none;
+  bottom: 206px;
+  font-weight: 400;
+  height: 50px;
+  left: 0px;
+  outline: none;
+  padding-left: 55px;
+  position: absolute;
+  right: 0px;
+  width: calc(100% - 55px);
+  z-index: 99;
 }
 
 .emojis {
-    position: absolute;
-    display: block;
-    bottom: 208px;
-    left: 7px;
-    width: 34px;
-    height: 34px;
-    background-image: url(https://i.imgur.com/5WUpcPZ.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 100;
-    cursor: pointer;
+  background-image: url(https://i.imgur.com/5WUpcPZ.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 208px;
+  cursor: pointer;
+  display: block;
+  height: 34px;
+  left: 7px;
+  position: absolute;
+  width: 34px;
+  z-index: 100;
 }
 
 #page-cont button {
-    position: absolute;
-    display: block;
-    bottom: 208px;
-    right: 7px;
-    width: 100px;
-    height: 50px;
-    background-size: cover;
-    z-index: 100;
-    cursor: pointer;
+  background-size: cover;
+  bottom: 208px;
+  cursor: pointer;
+  display: block;
+  height: 50px;
+  position: absolute;
+  right: 7px;
+  width: 100px;
+  z-index: 100;
 }
