@@ -10,13 +10,18 @@ ol.chat
   = each messages as |m|
     if m.isOwner
       li.self
+        div.msg
+              p
+                = m.t
+              time
+                = m.x
     else
       li.other
-    div.msg
-          p
-            = m.t
-          time
-            = m.x
+        div.msg
+              p
+                = m.t
+              time
+                = m.x
 = textarea value=messageText class="textarea" type="text" placeholder="Type here!" value=messageText
 div.emojis
 .submit
