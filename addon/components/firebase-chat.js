@@ -6,12 +6,16 @@ const {
   get,
   set,
   inject: { service },
-  computed
+  computed,
+  observer
 } = Ember;
 
 export default Component.extend({
   layout,
   store: service(),
+  newMessages: Ember.observer('messages', function() {
+    $(".chat").scrollTop = $(".chat").scrollHeight;
+  }),
   actions: {
     sendMessage() {
       get(this, 'sendMessage')(get(this, 'messageText'));
