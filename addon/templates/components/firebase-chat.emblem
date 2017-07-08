@@ -25,5 +25,5 @@ ol.chat
 = textarea value=messageText class="textarea" type="text" placeholder="Type here!" value=messageText
 div.emojis
 .submit
-  button click='sendMessage'
+  button value='send' click='sendMessage'
     | Submit
