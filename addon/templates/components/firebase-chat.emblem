@@ -1,29 +1,28 @@
 .menu
-  h1
-    | Messages
   .back
-    i.fa.fa-chevron-left
-      img src=avatarUrl alt=name  draggable="false"
+    = link-to 'contacts'
+      i.fa.fa-chevron-left
   div.name
     = name
 ol.chat
   = each messages as |m|
     if m.isOwner
       li.self
+        div.avatar
         div.msg
-              p
-                = m.t
-              time
-                = m.x
+          p
+            = m.t
+          time
+            = m.x
     else
       li.other
+        div.avatar
         div.msg
-              p
-                = m.t
-              time
-                = m.x
+          p
+            = m.t
+          time
+            = m.x
 = textarea value=messageText class="textarea" type="text" placeholder="Type here!" value=messageText
-div.emojis
 .submit
   button value='send' click='sendMessage'
     | Submit
