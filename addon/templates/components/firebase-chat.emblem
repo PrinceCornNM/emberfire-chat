@@ -24,5 +24,5 @@ ol.chat
             = m.x
 = textarea value=messageText class="textarea" type="text" placeholder="Type here!" value=messageText
 .submit
-  button value='send' click='sendMessage'
+  .but value='send' click='sendMessage'
     | Submit

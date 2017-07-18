@@ -214,11 +214,12 @@ textarea {
     font-weight: 400;
 }
 
-button {
+.but {
     position: fixed;
     bottom: 200px;
     right: 0px;
     z-index: 100;
     border: none;
     outline: none;
+    cursor: pointer;
 }
