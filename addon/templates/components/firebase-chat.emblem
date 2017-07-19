@@ -1,28 +1,23 @@
-.menu
-  .back
-    = link-to 'contacts'
-      i.fa.fa-chevron-left
-  div.name
-    = name
-ol.chat
-  = each messages as |m|
-    if m.isOwner
-      li.self
-        div.avatar
-        div.msg
-          p
-            = m.t
-          time
-            = m.x
-    else
-      li.other
-        div.avatar
-        div.msg
-          p
-            = m.t
-          time
-            = m.x
-= textarea value=messageText class="textarea" type="text" placeholder="Type here!" value=messageText
-.submit
-  .but value='send' click='sendMessage'
-    | Submit
+.panel
+  ol.chat
+    = each messages as |m|
+      if m.isOwner
+        li.self
+          div.avatar
+          div.msg
+            p
+              = m.t
+            time
+              = m.x
+      else
+        li.other
+          div.avatar
+          div.msg
+            p
+              = m.t
+            time
+              = m.x
+  .submit
+    = textarea value=messageText class="textarea" type="text" placeholder="Type here!" value=messageText
+    .but value='send' click='sendMessage'
+      | Submit
