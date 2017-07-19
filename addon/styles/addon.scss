@@ -5,7 +5,7 @@ $scroll-bar: 17px;
 
 /* M E S S A G E S */
 
-.chat {
+.cht {
   list-style: none;
   background: none;
   margin: 0;
@@ -14,12 +14,12 @@ $scroll-bar: 17px;
   max-height: 60vh;
   overflow-y: scroll;
 }
-.chat li {
+.cht li {
   padding: 0.5rem;
   overflow: hidden;
   display: flex;
 }
-.chat .avatar {
+.cht .ava {
   width: 40px;
   height: 40px;
   position: relative;
@@ -30,7 +30,7 @@ $scroll-bar: 17px;
   -moz-border-radius: 100%;
   -ms-border-radius: 100%;
 }
-.chat .avatar img {
+.cht .ava img {
   width: 40px;
   height: 40px;
   border-radius: 100%;
@@ -53,18 +53,18 @@ $scroll-bar: 17px;
   height: 0px;
 }
 
-.self {
+.slf {
   justify-content: flex-end;
   align-items: flex-end;
 }
-.self .msg {
+.slf .msg {
   order: 1;
   border-bottom-right-radius: 0px;
 }
-.self .avatar {
+.slf .ava {
   order: 2;
 }
-.self .avatar:after {
+.slf .ava:after {
   content: "";
   position: relative;
   display: inline-block;
@@ -119,7 +119,7 @@ $scroll-bar: 17px;
 
 /* T Y P E */
 
-.submit {
+.subm {
   position: absolute;
   resize: none;
   width: calc(75vw - #{$scroll-bar});
@@ -147,7 +147,7 @@ textarea {
   cursor: pointer;
 }
 
-.panel{
+.pnl{
   position: relative;
   border-right: 0px;
   margin: 0 $chat-border;
@@ -161,12 +161,10 @@ textarea {
 }
 
 @media (max-width: $tablet-1){
-  .panel {
+  .pnl {
     width: calc(100% - #{$chat-border} * 2);
   }
-  .submit {
+  .subm {
     width: calc( 100% - #{$scroll-bar});
   }
-}
-@media (max-width: $mobile-1 ) {
 }

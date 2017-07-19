@@ -1,23 +1,23 @@
-.panel
-  ol.chat
+.pnl
+  ol.cht
     = each messages as |m|
       if m.isOwner
-        li.self
-          div.avatar
+        li.slf
+          div.ava
           div.msg
             p
               = m.t
             time
               = m.x
       else
-        li.other
-          div.avatar
+        li.oth
+          div.ava
           div.msg
             p
               = m.t
             time
               = m.x
-  .submit
+  .subm
     = textarea value=messageText class="textarea" type="text" placeholder="Type here!" value=messageText
     .but value='send' click='sendMessage'
       | Submit
