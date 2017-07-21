@@ -83,6 +83,7 @@ $scroll-bar: 17px;
 .msg p {
   font-size: 0.8rem;
   margin: 0 0 0.2rem 0;
+  word-wrap: break-word;
 }
 .msg img {
   position: relative;
@@ -94,13 +95,13 @@ $scroll-bar: 17px;
 }
 @media screen and (max-width: 800px) {
   .msg img {
-  width: 300px;
-}
+    width: 300px;
+  }
 }
 @media screen and (max-width: 550px) {
   .msg img {
-  width: 200px;
-}
+    width: 200px;
+  }
 }
 
 .msg time {
@@ -133,18 +134,26 @@ $scroll-bar: 17px;
 
 textarea {
   position: absolute;
-  width: 100%;
+  width: calc(100% - 90px);
   height: 100%;
   resize:none;
 }
 
 .but {
   position: absolute;
-  right: 0;
+  right: -.5%;
   z-index: 100;
-  bottom: 50%;
   color: black;
   cursor: pointer;
+  transform: translate(0, -50%);
+  top: 52%;
+  height: 100%;
+  padding: 0 20px;
+  background-color: white;
+}
+
+.but:hover {
+  background-color: #EF3E36;
 }
 
 .pnl{
