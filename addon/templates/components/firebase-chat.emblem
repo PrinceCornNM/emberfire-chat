@@ -1,4 +1,4 @@
-.pnl
+.efc-pnl
   ol.cht
     = each messages as |m|
       if m.isOwner
