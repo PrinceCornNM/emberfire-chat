@@ -2,6 +2,9 @@ $tablet-1: 836px;
 $mobile-1: 516px;
 $chat-border: 30px;
 $scroll-bar: 17px;
+$avatar-width: 40px;
+$message-height: 40px;
+$submit-height: 50px;
 
 /* M E S S A G E S */
 
@@ -16,12 +19,14 @@ $scroll-bar: 17px;
 }
 .cht li {
   padding: 0.5rem;
+  min-height: $message-height;
   overflow: hidden;
-  display: flex;
+  display: block;
+  position: relative;
 }
 .cht .ava {
-  width: 40px;
-  height: 40px;
+  width: $avatar-width;
+  height: $avatar-width;
   position: relative;
   display: block;
   z-index: 2;
@@ -39,11 +44,11 @@ $scroll-bar: 17px;
   -ms-border-radius: 100%;
 }
 
-.other .msg {
-  order: 1;
-  border-top-left-radius: 0px;
+.oth .msg {
+  background-color: #320E3B;
+  left: $avatar-width + 10px;
 }
-.other:before {
+.oth:before {
   content: "";
   position: relative;
   top: 0px;
@@ -53,32 +58,18 @@ $scroll-bar: 17px;
   height: 0px;
 }
 
-.slf {
-  justify-content: flex-end;
-  align-items: flex-end;
-}
 .slf .msg {
-  order: 1;
-  border-bottom-right-radius: 0px;
-}
-.slf .ava {
-  order: 2;
-}
-.slf .ava:after {
-  content: "";
-  position: relative;
-  display: inline-block;
-  bottom: 19px;
-  right: 0px;
-  width: 0px;
-  height: 0px;
+  background-color: #EF3E36;
+  right: 0;
 }
 
 .msg {
   min-width: 50px;
   padding: 10px;
   border-radius: 2px;
-  background-color: #EF3E36;
+  display: inline-block;
+  position: absolute;
+  top:0;
 }
 .msg p {
   font-size: 0.8rem;
@@ -124,7 +115,7 @@ $scroll-bar: 17px;
   position: absolute;
   resize: none;
   width: calc(75vw - #{$scroll-bar});
-  height: 50px;
+  height: $submit-height;
   left: 0;
   bottom: 2px;
   z-index: 99;
@@ -143,17 +134,18 @@ textarea {
   position: absolute;
   right: -.5%;
   z-index: 100;
-  color: black;
-  cursor: pointer;
+  margin: 0;
   transform: translate(0, -50%);
   top: 52%;
   height: 100%;
-  padding: 0 20px;
-  background-color: white;
-}
-
-.but:hover {
   background-color: #EF3E36;
+  border: none;
+  color: #FFFFFF;
+  line-height: $submit-height;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  padding: 0 20px;
 }
 
 .pnl{
@@ -162,7 +154,6 @@ textarea {
   margin: 0 $chat-border;
   min-width: 260px;
   width: 75vw;
-  background-color: #320E3B;
   border-bottom: solid $chat-border #FFFFFF;
   border-top: solid $chat-border #FFFFFF;
   color: #FFFFFF;

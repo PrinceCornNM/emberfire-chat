@@ -3,7 +3,6 @@
     = each messages as |m|
       if m.isOwner
         li.slf
-          div.ava
           div.msg
             p
               = m.t
@@ -12,6 +11,7 @@
       else
         li.oth
           div.ava
+            img src="{{avatarUrl}}"
           div.msg
             p
               = m.t
