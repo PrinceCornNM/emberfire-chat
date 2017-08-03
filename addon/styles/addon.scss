@@ -8,7 +8,6 @@ $submit-height: 50px;
 
 .efc-pnl {
   border-right: 0px;
-  color: white;
   display: block;
   margin: 0 $chat-border;
   min-width: 260px;
@@ -55,7 +54,6 @@ $submit-height: 50px;
 
   .oth {
     .msg {
-      background-color: grey;
       margin-left: 10px;
     }
   }
@@ -63,7 +61,6 @@ $submit-height: 50px;
   .slf {
     text-align: right;
     .msg {
-      background-color: grey;
     }
   }
 
@@ -95,7 +92,6 @@ $submit-height: 50px;
       margin-top: 3px;
     }
     time:before{
-      color: white;
       content:"\f017";
       display: inline-block;
       font-family: FontAwesome;
@@ -117,17 +113,15 @@ $submit-height: 50px;
     z-index: 99;
 
     textarea {
+      border: none;
       height: 100%;
       position: absolute;
       resize: none;
-      border: none;
       width: calc(100% - 90px);
     }
 
     .but {
-      background-color: grey;
       border: none;
-      color: white;
       cursor: pointer;
       display: block;
       font-size: 16px;
