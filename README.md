@@ -13,12 +13,7 @@ In order for the addon to be correctly configured it needs the following:
 
 ## How it Works
 
- * Component: firebase-chat - component that takes some parameters and provides simple ui for messaging
-   * Parameters:
-     * messages - a models for messages
-     * sendMessage - action that bubbles up and tells the backend to send a message
-     * name - name of the recipient for the ui
-     * avatarUrl - url for an image for the recipient
+ * (ember-chat)[https://github.com/PrinceCornNM/ember-chat]
  * Instance Initializer: emberfire-chat - an instance-initializer that adds the push notification listener subscription to the service worker.
 
 ## Example:
