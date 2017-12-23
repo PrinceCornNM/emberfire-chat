@@ -13,7 +13,7 @@ In order for the addon to be correctly configured it needs the following:
 
 ## How it Works
 
- * (ember-chat)[https://github.com/PrinceCornNM/ember-chat]
+ * [ember-chat](https://github.com/PrinceCornNM/ember-chat)
  * Instance Initializer: emberfire-chat - an instance-initializer that adds the push notification listener subscription to the service worker.
 
 ## Example:
